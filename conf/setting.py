@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-配置
-"""
+# @Desc: 配置
 
 DATABASE_URI = 'mysql+pymysql://root:123456@127.0.0.1:3306/ipproxy?charset=utf8'
 

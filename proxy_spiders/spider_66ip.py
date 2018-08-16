@@ -1,7 +1,9 @@
+# -*- coding: utf-8 -*-
+# @Desc: 66免费代理
+
 import re
 import time
 import threading
-
 from logic import logic_common
 from logger.error_log import error_log
 from logger.info_log import info_log

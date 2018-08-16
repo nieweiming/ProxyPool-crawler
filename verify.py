@@ -1,6 +1,8 @@
+# -*- coding: utf-8 -*-
+# @Desc: IP定时检验
+
 import threading
 import time
-
 from logic import logic_proxypool
 
 

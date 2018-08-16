@@ -1,6 +1,8 @@
+# -*- coding: utf-8 -*-
+# @Desc: 快代理
+
 from bs4 import BeautifulSoup
 import threading
-
 from logic import logic_common
 from logger.error_log import error_log
 from logger.info_log import info_log

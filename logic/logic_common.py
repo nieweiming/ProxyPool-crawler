@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+# @Desc: 通用模块
+
 import requests
 import time
 import random

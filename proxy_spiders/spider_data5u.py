@@ -1,6 +1,8 @@
+# -*- coding: utf-8 -*-
+# @Desc: 无忧代理
+
 import threading
 from bs4 import BeautifulSoup
-
 from logic import logic_common
 from logger.error_log import error_log
 from logger.info_log import info_log
@@ -34,7 +36,6 @@ class SpiderData5u(threading.Thread):
     def __init__(self):
         super(SpiderData5u, self).__init__()
         self.daemon = True
-
 
     def run(self):
         self.result = crawl()

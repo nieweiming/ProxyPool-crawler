@@ -1,12 +1,12 @@
+# -*- coding: utf-8 -*-
+# @Desc: 数据库的初始化
 
-#数据库的初始化
-from models.models import *
+from models.models import Base, engine
 
 
 def create_tables():
-    """
-    数据库初始化
-    """
+    """数据库初始化"""
+
     Base.metadata.create_all(engine)
 
 

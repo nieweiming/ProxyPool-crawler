@@ -1,9 +1,6 @@
-# encoding:utf-8
-"""
-日志记录
+# -*- coding: utf-8 -*-
+# @Desc: 日志记录
 
-Date:       2018/04/29
-"""
 import logging
 import os
 

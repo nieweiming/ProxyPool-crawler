@@ -1,18 +1,13 @@
 # -*- coding: utf-8 -*-
-"""
-数据库操作
-"""
+# @Desc: 数据库操作
 
 from models.models import ProxyPool
 from models.models import DBSession
 
 
 def insert_into_proxypool(item):
-    """
-    插入代理IP
-    :param item:
-    :return: None
-    """
+    """插入代理IP"""
+
     ip_item = ProxyPool(item)
     session = DBSession()
     try:
@@ -24,11 +19,8 @@ def insert_into_proxypool(item):
 
 
 def update_ip(item):
-    """
-    更新代理IP
-    :param item:
-    :return:
-    """
+    """更新代理IP"""
+
     ip_item = ProxyPool(item)
     session = DBSession()
     try:
@@ -40,11 +32,8 @@ def update_ip(item):
 
 
 def delete_ip(item):
-    """
-    删除代理IP
-    :param item:
-    :return:
-    """
+    """删除代理IP"""
+
     session = DBSession()
     ip_item = session.query(ProxyPool).filter(ProxyPool.id == item['id']).first()
     if ip_item:
@@ -56,10 +45,8 @@ def delete_ip(item):
 
 
 def get_all_ip():
-    """
-    获取所有IP
-    :return:
-    """
+    """获取所有IP"""
+
     session = DBSession()
     ip_list = session.query(ProxyPool).all()
     result = [item.to_dict() for item in ip_list]

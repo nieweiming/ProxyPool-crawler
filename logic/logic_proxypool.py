@@ -1,18 +1,17 @@
+# -*- coding: utf-8 -*-
+# @Desc: 检验IP是否可用 , 代理池中插入ip ,验证ip信息, 加载未通过验证的ip
+
 import requests
 import time
 import json
-
 from models import proxypool
 from logger.error_log import error_log
 from logger.info_log import info_log
 
 
 def is_available(ip):
-    """
-    检验IP是否可用
-    :param ip:
-    :return:
-    """
+    """检验IP是否可用"""
+
     proxies = {
         'http': 'http://%s' % ip,
         'https': 'http://%s' % ip
@@ -29,11 +28,8 @@ def is_available(ip):
 
 
 def insert_into_proxypool(ip):
-    """
-    代理池中插入ip
-    :param ip:
-    :return:
-    """
+    """代理池中插入ip"""
+
     status = is_available(ip)
     if not status:
         return
@@ -52,11 +48,8 @@ def insert_into_proxypool(ip):
 
 
 def verify_ip(ip_item):
-    """
-    验证ip信息
-    :param ip_item:
-    :return:
-    """
+    """验证ip信息"""
+
     status = is_available('%s:%s' % (ip_item['ip'], ip_item['ip_port']))
     if status:
         ip_item['utime'] = int(time.time())
@@ -76,7 +69,8 @@ def verify_ip(ip_item):
 
 
 def load_unverified_ip():
-    '''加载未通过验证的ip'''
+    """加载未通过验证的ip"""
+
     ip_items = proxypool.get_all_ip()
     items = []
     for item in ip_items:

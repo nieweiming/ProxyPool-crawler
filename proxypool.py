@@ -1,6 +1,8 @@
+# -*- coding: utf-8 -*-
+# @Desc: 启动文件
+
 import threading
 import time
-
 from proxy_spiders.spider_66ip import SpiderIP66
 from proxy_spiders.spider_89ip import SpiderIP89
 from proxy_spiders.spider_data5u import SpiderData5u
