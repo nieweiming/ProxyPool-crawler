@@ -1,0 +1,16 @@
+# Pycharm:
+.idea
+*.iml
+
+# Python:
+*.py[cod]
+*.so
+*.egg
+*.egg-info
+dist
+build
+
+# Windows:
+Thumbs.db
+ehthumbs.db
+Desktop.ini
