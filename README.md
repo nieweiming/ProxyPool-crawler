@@ -44,7 +44,7 @@ python3 verify.py
 
 ```python
 ProxyPool
-	conf
+    conf
     	init.py
         settings.py  #数据库的相关配置
     log_files        #日志信息,打印成功与错误日志信息
@@ -72,7 +72,6 @@ ProxyPool
         spider_xicidaili.py     #http://www.xicidaili.com   西刺代理
 	init.py        #数据库的初始化,并进行建表
     proxypool.py   #抓取ip启动文件
-    server.py      #服务器
     verify.py      #定时验证ip进行更新
 ```
 
